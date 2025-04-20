@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Auctions - BidMaster</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/category.css">
+    <link rel="stylesheet" href="css/auction-cards.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <h1>BidMaster</h1>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="auctions.html">Auctions</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                                    Categories
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="category.html?cat=electronics">Electronics</a></li>
+                                    <li><a class="dropdown-item" href="category.html?cat=fashion">Fashion</a></li>
+                                    <li><a class="dropdown-item" href="category.html?cat=home">Home & Living</a></li>
+                                    <li><a class="dropdown-item" href="category.html?cat=art">Art & Collectibles</a></li>
+                                    <li><a class="dropdown-item" href="category.html?cat=vehicles">Vehicles</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="how-it-works.html">How It Works</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="help.html">Help/FAQ</a>
+                            </li>
+                        </ul>
+                        <div class="search-box me-3">
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search auctions...">
+                                <button class="btn btn-outline-primary" type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="auth-buttons">
+                            <a href="my-account.html" class="btn btn-outline-secondary me-2">
+                                <i class="fas fa-user"></i> My Account
+                            </a>
+                            <a href="list-item.html" class="btn btn-success me-2">
+                                <i class="fas fa-plus-circle"></i> List Item
+                            </a>
+                            <a href="login.html" class="btn btn-outline-primary me-2">Login</a>
+                            <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Auctions Header Section -->
+    <section class="category-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1>Active Auctions</h1>
+                    <p>Browse all active auctions across all categories</p>
+                    <div class="category-stats">
+                        <span><i class="fas fa-gavel"></i> <span id="active-count">0</span> active auctions</span>
+                        <span><i class="fas fa-tag"></i> <span id="total-count">0</span> total items</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="filters-sidebar">
+                        <h3>Filters</h3>
+                        <div class="filter-group">
+                            <h4>Price Range</h4>
+                            <div class="price-range">
+                                <input type="range" class="form-range" id="priceRange" min="0" max="10000" step="100">
+                                <div class="price-inputs">
+                                    <input type="number" id="minPrice" placeholder="Min" class="form-control">
+                                    <span>to</span>
+                                    <input type="number" id="maxPrice" placeholder="Max" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <h4>Category</h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="cat-electronics">
+                                <label class="form-check-label" for="cat-electronics">Electronics</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="cat-fashion">
+                                <label class="form-check-label" for="cat-fashion">Fashion</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="cat-home">
+                                <label class="form-check-label" for="cat-home">Home & Living</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="cat-art">
+                                <label class="form-check-label" for="cat-art">Art & Collectibles</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="cat-vehicles">
+                                <label class="form-check-label" for="cat-vehicles">Vehicles</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="cat-sports">
+                                <label class="form-check-label" for="cat-sports">Sports & Leisure</label>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <h4>Condition</h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="condition-new">
+                                <label class="form-check-label" for="condition-new">New</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="condition-like-new">
+                                <label class="form-check-label" for="condition-like-new">Like New</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="condition-good">
+                                <label class="form-check-label" for="condition-good">Good</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="condition-fair">
+                                <label class="form-check-label" for="condition-fair">Fair</label>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <h4>Ending Soon</h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="ending-today">
+                                <label class="form-check-label" for="ending-today">Today</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="ending-tomorrow">
+                                <label class="form-check-label" for="ending-tomorrow">Tomorrow</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="ending-week">
+                                <label class="form-check-label" for="ending-week">This Week</label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary w-100" id="apply-filters">Apply Filters</button>
+                        <button class="btn btn-outline-secondary w-100 mt-2" id="reset-filters">Reset Filters</button>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="sort-options">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="results-count">
+                                Showing <span id="results-count">0</span> results
+                            </div>
+                            <div class="sort-dropdown">
+                                <select class="form-select" id="sort-options">
+                                    <option value="newest">Newest First</option>
+                                    <option value="ending-soon">Ending Soon</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                    <option value="popular">Most Popular</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="auction-items">
+                        <!-- Auction items will be loaded here dynamically -->
+                        <div class="col-12 text-center py-5">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <p class="mt-3">Loading auctions...</p>
+                        </div>
+                    </div>
+                    <div class="pagination-container mt-4">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-center" id="pagination">
+                                <!-- Pagination will be generated dynamically -->
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-about">
+                        <h3>BidMaster</h3>
+                        <p>Your premier destination for online auctions. Find amazing deals on a wide range of items.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="auctions.html">Auctions</a></li>
+                            <li><a href="how-it-works.html">How It Works</a></li>
+                            <li><a href="help.html">Help/FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-links">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="category.html?cat=electronics">Electronics</a></li>
+                            <li><a href="category.html?cat=fashion">Fashion</a></li>
+                            <li><a href="category.html?cat=home">Home & Living</a></li>
+                            <li><a href="category.html?cat=art">Art & Collectibles</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-links">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-links">
+                        <h4>Account</h4>
+                        <ul>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="signup.html">Sign Up</a></li>
+                            <li><a href="my-account.html">My Account</a></li>
+                            <li><a href="my-bids.html">My Bids</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; 2025 BidMaster. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="payment-methods">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="made-with-love">
+                    <p>Made with <span class="heart">❤️</span> by <strong>ROHAN</strong> - 12301193</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/auctions.js"></script>
+</body>
+</html> 

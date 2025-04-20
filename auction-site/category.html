@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category - BidMaster</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="css/auction-cards.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <h1>BidMaster</h1>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="auctions.html">Auctions</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                                    Categories
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="category.html?cat=electronics">Electronics</a></li>
+                                    <li><a class="dropdown-item" href="category.html?cat=fashion">Fashion</a></li>
+                                    <li><a class="dropdown-item" href="category.html?cat=home">Home & Living</a></li>
+                                    <li><a class="dropdown-item" href="category.html?cat=art">Art & Collectibles</a></li>
+                                    <li><a class="dropdown-item" href="category.html?cat=vehicles">Vehicles</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="how-it-works.html">How It Works</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="help.html">Help/FAQ</a>
+                            </li>
+                        </ul>
+                        <div class="search-box me-3">
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search auctions...">
+                                <button class="btn btn-outline-primary" type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="auth-buttons">
+                            <a href="my-account.html" class="btn btn-outline-secondary me-2">
+                                <i class="fas fa-user"></i> My Account
+                            </a>
+                            <a href="list-item.html" class="btn btn-success me-2">
+                                <i class="fas fa-plus-circle"></i> List Item
+                            </a>
+                            <a href="login.html" class="btn btn-outline-primary me-2">Login</a>
+                            <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Category Header Section -->
+    <section class="category-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 id="category-title">Loading Category...</h1>
+                    <p id="category-description">Loading category description...</p>
+                    <div class="category-stats">
+                        <span><i class="fas fa-gavel"></i> <span id="active-count">0</span> active auctions</span>
+                        <span><i class="fas fa-tag"></i> <span id="total-count">0</span> total items</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="filters-sidebar">
+                        <h3>Filters</h3>
+                        <div class="filter-group">
+                            <h4>Price Range</h4>
+                            <div class="price-range">
+                                <input type="range" class="form-range" id="priceRange" min="0" max="10000" step="100">
+                                <div class="price-inputs">
+                                    <input type="number" id="minPrice" placeholder="Min" class="form-control">
+                                    <span>to</span>
+                                    <input type="number" id="maxPrice" placeholder="Max" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <h4>Condition</h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="condition-new">
+                                <label class="form-check-label" for="condition-new">New</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="condition-like-new">
+                                <label class="form-check-label" for="condition-like-new">Like New</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="condition-good">
+                                <label class="form-check-label" for="condition-good">Good</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="condition-fair">
+                                <label class="form-check-label" for="condition-fair">Fair</label>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <h4>Ending Soon</h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="ending-today">
+                                <label class="form-check-label" for="ending-today">Today</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="ending-tomorrow">
+                                <label class="form-check-label" for="ending-tomorrow">Tomorrow</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="ending-week">
+                                <label class="form-check-label" for="ending-week">This Week</label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary w-100" id="apply-filters">Apply Filters</button>
+                        <button class="btn btn-outline-secondary w-100 mt-2" id="reset-filters">Reset Filters</button>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="sort-options">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="results-count">
+                                Showing <span id="results-count">0</span> results
+                            </div>
+                            <div class="sort-dropdown">
+                                <select class="form-select" id="sort-options">
+                                    <option value="ending-soon">Ending Soon</option>
+                                    <option value="newest">Newest First</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                    <option value="popular">Most Popular</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="auction-items">
+                        <!-- Auction items will be loaded here dynamically -->
+                        <div class="col-12 text-center py-5">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <p class="mt-3">Loading auctions...</p>
+                        </div>
+                    </div>
+                    <div class="pagination-container mt-4">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-center" id="pagination">
+                                <!-- Pagination will be generated dynamically -->
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-about">
+                        <h3>BidMaster</h3>
+                        <p>Your premier destination for online auctions. Find amazing deals on a wide range of items.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="auctions.html">Auctions</a></li>
+                            <li><a href="how-it-works.html">How It Works</a></li>
+                            <li><a href="help.html">Help/FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-links">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="category.html?cat=electronics">Electronics</a></li>
+                            <li><a href="category.html?cat=fashion">Fashion</a></li>
+                            <li><a href="category.html?cat=home">Home & Living</a></li>
+                            <li><a href="category.html?cat=art">Art & Collectibles</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-links">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-links">
+                        <h4>Account</h4>
+                        <ul>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="signup.html">Sign Up</a></li>
+                            <li><a href="my-account.html">My Account</a></li>
+                            <li><a href="my-bids.html">My Bids</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; 2025 BidMaster. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="payment-methods">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="made-with-love">
+                    <p>Made with <span class="heart">❤️</span> by <strong>ROHAN</strong> - 12301193</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script>
+        // Category page functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get category from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('cat');
+            const subcategory = urlParams.get('sub');
+            
+            // Set page title based on category
+            document.title = `${capitalizeFirstLetter(category || 'All')} - BidMaster`;
+            
+            // Update category header
+            updateCategoryHeader(category, subcategory);
+            
+            // Load auctions for this category
+            loadCategoryAuctions(category, subcategory);
+            
+            // Initialize filters
+            initializeFilters();
+            
+            // Initialize pagination
+            initializePagination();
+        });
+        
+        function capitalizeFirstLetter(string) {
+            if (!string) return 'All Categories';
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+        
+        function updateCategoryHeader(category, subcategory) {
+            const categoryTitle = document.getElementById('category-title');
+            const categoryDescription = document.getElementById('category-description');
+            
+            if (category) {
+                categoryTitle.textContent = subcategory 
+                    ? `${capitalizeFirstLetter(subcategory)} in ${capitalizeFirstLetter(category)}`
+                    : capitalizeFirstLetter(category);
+                
+                // Set description based on category
+                const descriptions = {
+                    'electronics': 'Browse the latest gadgets, phones, laptops, and electronic accessories.',
+                    'fashion': 'Discover trendy clothing, accessories, shoes, and jewelry.',
+                    'home': 'Find furniture, decor, kitchen items, and everything for your home.',
+                    'art': 'Explore paintings, sculptures, antiques, and collectible items.',
+                    'vehicles': 'Browse cars, motorcycles, boats, and vehicle parts.',
+                    'sports': 'Find sports equipment, memorabilia, and outdoor gear.'
+                };
+                
+                categoryDescription.textContent = descriptions[category] || 
+                    `Browse all items in the ${capitalizeFirstLetter(category)} category.`;
+            } else {
+                categoryTitle.textContent = 'All Categories';
+                categoryDescription.textContent = 'Browse all auctions across all categories.';
+            }
+        }
+        
+        function loadCategoryAuctions(category, subcategory) {
+            // This would normally be an AJAX call to the server
+            // For demo purposes, we'll simulate loading data
+            
+            // Simulate loading delay
+            setTimeout(() => {
+                // Sample auction data - in a real app, this would come from the server
+                const auctions = generateSampleAuctions(category, subcategory);
+                
+                // Update counts
+                document.getElementById('active-count').textContent = auctions.length;
+                document.getElementById('total-count').textContent = auctions.length * 3; // Simulated total
+                document.getElementById('results-count').textContent = auctions.length;
+                
+                // Display auctions
+                displayAuctions(auctions);
+                
+                // Update pagination
+                updatePagination(auctions.length);
+            }, 1000);
+        }
+        
+        function generateSampleAuctions(category, subcategory) {
+            // Sample data for demonstration
+            const sampleAuctions = [];
+            
+            // Generate 12 sample auctions
+            for (let i = 1; i <= 12; i++) {
+                const auction = {
+                    id: i,
+                    title: `${capitalizeFirstLetter(category || 'Item')} ${i}`,
+                    price: Math.floor(Math.random() * 1000) + 50,
+                    bids: Math.floor(Math.random() * 20),
+                    timeLeft: Math.floor(Math.random() * 5) + 1,
+                    image: `https://placehold.co/300x200/3498db/ffffff?text=${capitalizeFirstLetter(category || 'Item')}+${i}`,
+                    category: category || 'general',
+                    subcategory: subcategory || null
+                };
+                
+                sampleAuctions.push(auction);
+            }
+            
+            return sampleAuctions;
+        }
+        
+        function displayAuctions(auctions) {
+            const container = document.getElementById('auction-items');
+            container.innerHTML = '';
+            
+            if (auctions.length === 0) {
+                container.innerHTML = `
+                    <div class="col-12 text-center py-5">
+                        <i class="fas fa-search fa-3x text-muted mb-3"></i>
+                        <h3>No auctions found</h3>
+                        <p>Try adjusting your filters or browse all auctions.</p>
+                        <a href="auctions.html" class="btn btn-primary mt-3">Browse All Auctions</a>
+                    </div>
+                `;
+                return;
+            }
+            
+            auctions.forEach(auction => {
+                const auctionCard = `
+                    <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="auction-card">
+                            <div class="auction-image">
+                                <img src="${auction.image}" alt="${auction.title}">
+                                <div class="auction-category">${capitalizeFirstLetter(auction.category)}</div>
+                            </div>
+                            <div class="auction-details">
+                                <h4>${auction.title}</h4>
+                                <div class="auction-price">$${auction.price.toFixed(2)}</div>
+                                <div class="auction-meta">
+                                    <span><i class="fas fa-gavel"></i> ${auction.bids} bids</span>
+                                    <span><i class="fas fa-clock"></i> ${auction.timeLeft}d left</span>
+                                </div>
+                                <a href="auction-details.html?id=${auction.id}" class="btn btn-sm btn-primary">View Auction</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                container.innerHTML += auctionCard;
+            });
+        }
+        
+        function initializeFilters() {
+            // Price range slider
+            const priceRange = document.getElementById('priceRange');
+            const minPrice = document.getElementById('minPrice');
+            const maxPrice = document.getElementById('maxPrice');
+            
+            priceRange.addEventListener('input', function() {
+                maxPrice.value = this.value;
+            });
+            
+            // Apply filters button
+            document.getElementById('apply-filters').addEventListener('click', function() {
+                // In a real app, this would filter the auctions
+                // For demo, we'll just reload with the same data
+                const urlParams = new URLSearchParams(window.location.search);
+                const category = urlParams.get('cat');
+                const subcategory = urlParams.get('sub');
+                
+                loadCategoryAuctions(category, subcategory);
+            });
+            
+            // Reset filters button
+            document.getElementById('reset-filters').addEventListener('click', function() {
+                // Reset all filter inputs
+                document.querySelectorAll('.filters-sidebar input').forEach(input => {
+                    if (input.type === 'checkbox') {
+                        input.checked = false;
+                    } else if (input.type === 'range') {
+                        input.value = input.max;
+                    } else {
+                        input.value = '';
+                    }
+                });
+                
+                // Reload auctions
+                const urlParams = new URLSearchParams(window.location.search);
+                const category = urlParams.get('cat');
+                const subcategory = urlParams.get('sub');
+                
+                loadCategoryAuctions(category, subcategory);
+            });
+            
+            // Sort options
+            document.getElementById('sort-options').addEventListener('change', function() {
+                // In a real app, this would sort the auctions
+                // For demo, we'll just reload with the same data
+                const urlParams = new URLSearchParams(window.location.search);
+                const category = urlParams.get('cat');
+                const subcategory = urlParams.get('sub');
+                
+                loadCategoryAuctions(category, subcategory);
+            });
+        }
+        
+        function initializePagination() {
+            const pagination = document.getElementById('pagination');
+            pagination.innerHTML = '';
+        }
+        
+        function updatePagination(totalItems) {
+            const pagination = document.getElementById('pagination');
+            pagination.innerHTML = '';
+            
+            const itemsPerPage = 9;
+            const totalPages = Math.ceil(totalItems / itemsPerPage);
+            
+            if (totalPages <= 1) {
+                return;
+            }
+            
+            // Previous button
+            pagination.innerHTML += `
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            `;
+            
+            // Page numbers
+            for (let i = 1; i <= totalPages; i++) {
+                pagination.innerHTML += `
+                    <li class="page-item ${i === 1 ? 'active' : ''}">
+                        <a class="page-link" href="#">${i}</a>
+                    </li>
+                `;
+            }
+            
+            // Next button
+            pagination.innerHTML += `
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            `;
+            
+            // Add click handlers
+            pagination.querySelectorAll('.page-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    if (this.getAttribute('aria-label') === 'Previous') {
+                        // Go to previous page
+                        const activePage = pagination.querySelector('.active');
+                        if (activePage && activePage.previousElementSibling) {
+                            activePage.classList.remove('active');
+                            activePage.previousElementSibling.classList.add('active');
+                            // In a real app, this would load the previous page
+                        }
+                    } else if (this.getAttribute('aria-label') === 'Next') {
+                        // Go to next page
+                        const activePage = pagination.querySelector('.active');
+                        if (activePage && activePage.nextElementSibling) {
+                            activePage.classList.remove('active');
+                            activePage.nextElementSibling.classList.add('active');
+                            // In a real app, this would load the next page
+                        }
+                    } else {
+                        // Go to specific page
+                        pagination.querySelectorAll('.page-item').forEach(item => {
+                            item.classList.remove('active');
+                        });
+                        this.parentElement.classList.add('active');
+                        // In a real app, this would load the specific page
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html> 

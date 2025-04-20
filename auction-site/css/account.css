@@ -1,0 +1,385 @@
+/* Account Section Styles */
+.account-section {
+    padding: 40px 0;
+    background-color: #f8f9fa;
+    min-height: calc(100vh - 200px);
+}
+
+/* Sidebar Styles */
+.account-sidebar {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: sticky;
+    top: 20px;
+}
+
+.profile-card {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin: 0 auto 15px;
+}
+
+.profile-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.profile-card p {
+    color: #666;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.account-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.account-nav a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.account-nav a i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.account-nav a:hover {
+    background: #f8f9fa;
+    color: #007bff;
+}
+
+.account-nav a.active {
+    background: #007bff;
+    color: #fff;
+}
+
+/* Main Content Styles */
+.account-content {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.content-header h2 {
+    margin: 0;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+/* Tab Content Styles */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Settings Form Styles */
+.settings-form {
+    max-width: 600px;
+}
+
+.settings-form .form-label {
+    font-weight: 500;
+    color: #333;
+}
+
+.settings-form .form-control {
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.settings-form .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Auction Card Styles */
+.auction-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.auction-card:hover {
+    transform: translateY(-5px);
+}
+
+.auction-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.auction-details {
+    padding: 20px;
+}
+
+.auction-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.auction-price {
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.auction-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.auction-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.auction-actions button {
+    flex: 1;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-edit {
+    background: #28a745;
+    color: #fff;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: #fff;
+}
+
+.btn-edit:hover {
+    background: #218838;
+}
+
+.btn-delete:hover {
+    background: #c82333;
+}
+
+/* Bid Card Styles */
+.bid-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.bid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.bid-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.bid-status {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.status-winning {
+    background: #28a745;
+    color: #fff;
+}
+
+.status-outbid {
+    background: #dc3545;
+    color: #fff;
+}
+
+.bid-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.bid-amount {
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.bid-time {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Watchlist Card Styles */
+.watchlist-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.watchlist-image {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+.watchlist-details {
+    padding: 15px;
+}
+
+.watchlist-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.watchlist-price {
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.watchlist-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.watchlist-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-bid {
+    flex: 2;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-remove {
+    flex: 1;
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-bid:hover {
+    background: #0056b3;
+}
+
+.btn-remove:hover {
+    background: #c82333;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .account-sidebar {
+        margin-bottom: 30px;
+        position: static;
+    }
+    
+    .content-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .content-header .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .account-section {
+        padding: 20px 0;
+    }
+    
+    .account-content {
+        padding: 20px;
+    }
+    
+    .auction-meta,
+    .bid-details,
+    .watchlist-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .auction-actions,
+    .watchlist-actions {
+        flex-direction: column;
+    }
+    
+    .auction-actions button,
+    .watchlist-actions button {
+        width: 100%;
+    }
+} 

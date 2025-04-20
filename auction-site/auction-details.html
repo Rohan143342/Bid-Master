@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Details - BidMaster</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auction-cards.css">
+    <link rel="stylesheet" href="css/auction-details.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <h1>BidMaster</h1>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="auctions.html">Auctions</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                                    Categories
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="category.html?cat=electronics">Electronics</a></li>
+                                    <li><a class="dropdown-item" href="category.html?cat=fashion">Fashion</a></li>
+                                    <li><a class="dropdown-item" href="category.html?cat=home">Home & Living</a></li>
+                                    <li><a class="dropdown-item" href="category.html?cat=art">Art & Collectibles</a></li>
+                                    <li><a class="dropdown-item" href="category.html?cat=vehicles">Vehicles</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="how-it-works.html">How It Works</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="help.html">Help/FAQ</a>
+                            </li>
+                        </ul>
+                        <div class="search-box me-3">
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search auctions...">
+                                <button class="btn btn-outline-primary" type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="auth-buttons">
+                            <a href="my-account.html" class="btn btn-outline-secondary me-2">
+                                <i class="fas fa-user"></i> My Account
+                            </a>
+                            <a href="list-item.html" class="btn btn-success me-2">
+                                <i class="fas fa-plus-circle"></i> List Item
+                            </a>
+                            <a href="login.html" class="btn btn-outline-primary me-2">Login</a>
+                            <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Auction Details Section -->
+    <section class="auction-details-section">
+        <div class="container">
+            <div class="row">
+                <!-- Left Column - Images and Description -->
+                <div class="col-lg-8">
+                    <div class="auction-gallery">
+                        <div class="main-image">
+                            <img src="images/auction-1.jpg" alt="iPhone 15 Pro Max" id="mainImage">
+                        </div>
+                        <div class="thumbnail-gallery">
+                            <div class="thumbnail active" data-img="images/auction-1.jpg">
+                                <img src="images/auction-1.jpg" alt="iPhone 15 Pro Max - Front">
+                            </div>
+                            <div class="thumbnail" data-img="images/auction-1-2.jpg">
+                                <img src="images/auction-1-2.jpg" alt="iPhone 15 Pro Max - Back">
+                            </div>
+                            <div class="thumbnail" data-img="images/auction-1-3.jpg">
+                                <img src="images/auction-1-3.jpg" alt="iPhone 15 Pro Max - Side">
+                            </div>
+                            <div class="thumbnail" data-img="images/auction-1-4.jpg">
+                                <img src="images/auction-1-4.jpg" alt="iPhone 15 Pro Max - Accessories">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="auction-description-card">
+                        <h2>iPhone 15 Pro Max</h2>
+                        <div class="auction-meta-info">
+                            <div class="meta-item">
+                                <i class="fas fa-tag"></i>
+                                <span>Category: Electronics</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Location: New York, USA</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Listed: April 15, 2025</span>
+                            </div>
+                        </div>
+                        
+                        <div class="description-content">
+                            <h3>Description</h3>
+                            <p>The iPhone 15 Pro Max is Apple's latest flagship smartphone, featuring the powerful A17 Pro chip and a stunning titanium design. This model comes with 256GB of storage and is in pristine condition, used for only 2 weeks.</p>
+                            
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>6.7-inch Super Retina XDR display</li>
+                                <li>A17 Pro chip for exceptional performance</li>
+                                <li>48MP main camera with advanced photography features</li>
+                                <li>Titanium design for durability and lightweight feel</li>
+                                <li>256GB storage capacity</li>
+                                <li>USB-C connector for faster charging and data transfer</li>
+                            </ul>
+                            
+                            <h4>Included Items:</h4>
+                            <ul>
+                                <li>iPhone 15 Pro Max (Titanium, 256GB)</li>
+                                <li>USB-C to USB-C cable</li>
+                                <li>20W USB-C power adapter</li>
+                                <li>SIM eject tool</li>
+                                <li>Original packaging</li>
+                            </ul>
+                            
+                            <h4>Condition:</h4>
+                            <p>Like new - used for only 2 weeks. No scratches, dents, or other damage. All functions work perfectly.</p>
+                            
+                            <h4>Shipping:</h4>
+                            <p>Free shipping within the United States. International shipping available at additional cost.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bid-history-card">
+                        <h3><i class="fas fa-history"></i> Bid History</h3>
+                        
+                        <div class="bid-history-filters">
+                            <select id="bidSort">
+                                <option value="recent">Most Recent</option>
+                                <option value="highest">Highest Bid</option>
+                                <option value="lowest">Lowest Bid</option>
+                            </select>
+                            <select id="bidTimeRange">
+                                <option value="all">All Time</option>
+                                <option value="today">Today</option>
+                                <option value="week">This Week</option>
+                                <option value="month">This Month</option>
+                            </select>
+                        </div>
+
+                        <div class="bid-history-table">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Bidder</th>
+                                        <th>Amount</th>
+                                        <th>Time</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="highest-bid">
+                                        <td>
+                                            <div class="bidder-info">
+                                                <img src="images/user-1.jpg" alt="TechEnthusiast" class="bidder-avatar">
+                                                <span class="bidder-name">TechEnthusiast</span>
+                                            </div>
+                                        </td>
+                                        <td class="bid-amount">$850</td>
+                                        <td class="bid-time">2 hours ago</td>
+                                        <td><span class="bid-status winning">Winning</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="bidder-info">
+                                                <img src="images/user-2.jpg" alt="AppleFan" class="bidder-avatar">
+                                                <span class="bidder-name">AppleFan</span>
+                                            </div>
+                                        </td>
+                                        <td class="bid-amount">$825</td>
+                                        <td class="bid-time">5 hours ago</td>
+                                        <td><span class="bid-status outbid">Outbid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="bidder-info">
+                                                <img src="images/user-3.jpg" alt="GadgetLover" class="bidder-avatar">
+                                                <span class="bidder-name">GadgetLover</span>
+                                            </div>
+                                        </td>
+                                        <td class="bid-amount">$800</td>
+                                        <td class="bid-time">1 day ago</td>
+                                        <td><span class="bid-status outbid">Outbid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="bidder-info">
+                                                <img src="images/user-4.jpg" alt="PhoneCollector" class="bidder-avatar">
+                                                <span class="bidder-name">PhoneCollector</span>
+                                            </div>
+                                        </td>
+                                        <td class="bid-amount">$775</td>
+                                        <td class="bid-time">2 days ago</td>
+                                        <td><span class="bid-status outbid">Outbid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="bidder-info">
+                                                <img src="images/user-5.jpg" alt="TechDeals" class="bidder-avatar">
+                                                <span class="bidder-name">TechDeals</span>
+                                            </div>
+                                        </td>
+                                        <td class="bid-amount">$750</td>
+                                        <td class="bid-time">3 days ago</td>
+                                        <td><span class="bid-status outbid">Outbid</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="bid-history-pagination">
+                            <button class="active">1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Bidding Panel -->
+                <div class="col-lg-4">
+                    <div class="bidding-panel">
+                        <div class="auction-status-card">
+                            <div class="auction-timer-large" data-end="2025-05-01T12:00:00">
+                                <div class="timer-label">Time Remaining</div>
+                                <div class="timer-display">
+                                    <div class="timer-block">
+                                        <span class="days">00</span>
+                                        <span class="timer-unit">Days</span>
+                                    </div>
+                                    <div class="timer-block">
+                                        <span class="hours">00</span>
+                                        <span class="timer-unit">Hours</span>
+                                    </div>
+                                    <div class="timer-block">
+                                        <span class="minutes">00</span>
+                                        <span class="timer-unit">Minutes</span>
+                                    </div>
+                                    <div class="timer-block">
+                                        <span class="seconds">00</span>
+                                        <span class="timer-unit">Seconds</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="auction-status status-active">Active</div>
+                        </div>
+                        
+                        <div class="current-bid-card">
+                            <div class="bid-info">
+                                <div class="current-bid-label">Current Bid</div>
+                                <div class="current-bid-amount">$850</div>
+                                <div class="bid-count">12 bids</div>
+                            </div>
+                            <div class="bid-increment-info">
+                                <div class="min-bid-increment">Minimum bid increment: $25</div>
+                                <div class="next-minimum-bid">Next minimum bid: $875</div>
+                            </div>
+                        </div>
+                        
+                        <div class="place-bid-card">
+                            <h3>Place Your Bid</h3>
+                            <form class="bid-form">
+                                <div class="form-group">
+                                    <label for="bidAmount">Your Bid Amount ($)</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input type="number" class="form-control" id="bidAmount" min="875" step="25" value="875">
+                                    </div>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="autoBidCheck">
+                                    <label class="form-check-label" for="autoBidCheck">
+                                        Enable Auto-Bidding
+                                    </label>
+                                </div>
+                                <div class="auto-bid-options" style="display: none;">
+                                    <div class="form-group">
+                                        <label for="maxBidAmount">Maximum Bid Amount ($)</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text">$</span>
+                                            <input type="number" class="form-control" id="maxBidAmount" min="875" step="25" value="1000">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="bidIncrement">Bid Increment ($)</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text">$</span>
+                                            <input type="number" class="form-control" id="bidIncrement" min="25" step="25" value="25">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg w-100">Place Bid</button>
+                            </form>
+                            <div class="login-prompt">
+                                <p>You need to be logged in to place a bid.</p>
+                                <a href="login.html" class="btn btn-outline-primary">Login</a>
+                                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                            </div>
+                        </div>
+                        
+                        <div class="seller-card">
+                            <div class="seller-header">
+                                <img src="images/seller-1.jpg" alt="Seller" class="seller-avatar">
+                                <div class="seller-info">
+                                    <h4>TechDeals</h4>
+                                    <div class="seller-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>(4.5 - 128 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="seller-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">98%</div>
+                                    <div class="stat-label">Positive Feedback</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">256</div>
+                                    <div class="stat-label">Items Sold</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">3</div>
+                                    <div class="stat-label">Years Member</div>
+                                </div>
+                            </div>
+                            <div class="seller-actions">
+                                <button class="btn btn-outline-primary w-100 mb-2">
+                                    <i class="fas fa-user"></i> View Seller Profile
+                                </button>
+                                <button class="btn btn-outline-primary w-100">
+                                    <i class="fas fa-comment"></i> Contact Seller
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="similar-items-card">
+                            <h3>Similar Items</h3>
+                            <div class="similar-items">
+                                <div class="similar-item">
+                                    <img src="images/auction-2.jpg" alt="MacBook Pro M3">
+                                    <div class="similar-item-info">
+                                        <h4>MacBook Pro M3</h4>
+                                        <div class="similar-item-price">$1,200</div>
+                                        <div class="similar-item-bids">8 bids</div>
+                                    </div>
+                                </div>
+                                <div class="similar-item">
+                                    <img src="images/auction-3.jpg" alt="Sony PlayStation 5">
+                                    <div class="similar-item-info">
+                                        <h4>Sony PlayStation 5</h4>
+                                        <div class="similar-item-price">$450</div>
+                                        <div class="similar-item-bids">15 bids</div>
+                                    </div>
+                                </div>
+                                <div class="similar-item">
+                                    <img src="images/auction-4.jpg" alt="DJI Drone 4K">
+                                    <div class="similar-item-info">
+                                        <h4>DJI Drone 4K</h4>
+                                        <div class="similar-item-price">$600</div>
+                                        <div class="similar-item-bids">10 bids</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-about">
+                        <h3>BidMaster</h3>
+                        <p>Your premier destination for online auctions. Find amazing deals on a wide range of items.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="auctions.html">Auctions</a></li>
+                            <li><a href="how-it-works.html">How It Works</a></li>
+                            <li><a href="help.html">Help/FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-links">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="category.html?cat=electronics">Electronics</a></li>
+                            <li><a href="category.html?cat=fashion">Fashion</a></li>
+                            <li><a href="category.html?cat=home">Home & Living</a></li>
+                            <li><a href="category.html?cat=art">Art & Collectibles</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-links">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-links">
+                        <h4>Account</h4>
+                        <ul>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="signup.html">Sign Up</a></li>
+                            <li><a href="my-account.html">My Account</a></li>
+                            <li><a href="my-bids.html">My Bids</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; 2025 BidMaster. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="payment-methods">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="made-with-love">
+                    <p>Made with <span class="heart">❤️</span> by <strong>ROHAN</strong> - 12301193</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/auction-details.js"></script>
+</body>
+</html> 

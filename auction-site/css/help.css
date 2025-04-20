@@ -1,0 +1,273 @@
+/* Help Page Styles */
+
+/* Help Hero Section */
+.help-hero {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 80px 0;
+    margin-bottom: 40px;
+}
+
+.help-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.help-hero p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-container .input-group {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.search-container .form-control {
+    border: none;
+    padding: 15px 20px;
+    font-size: 1rem;
+}
+
+.search-container .btn {
+    padding: 15px 30px;
+    border: none;
+    background: #007bff;
+}
+
+/* Quick Links Section */
+.quick-links {
+    padding: 40px 0;
+}
+
+.quick-link-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.quick-link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.quick-link-card .icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quick-link-card .icon i {
+    font-size: 24px;
+    color: #007bff;
+}
+
+.quick-link-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.quick-link-card p {
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.faq-sidebar {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 20px;
+}
+
+.faq-sidebar h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.faq-sidebar .nav-link {
+    color: #6c757d;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    transition: color 0.3s ease;
+}
+
+.faq-sidebar .nav-link:hover,
+.faq-sidebar .nav-link.active {
+    color: #007bff;
+    border-bottom-color: #007bff;
+}
+
+.faq-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.faq-category {
+    margin-bottom: 40px;
+}
+
+.faq-category h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.accordion-item {
+    border: none;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px !important;
+}
+
+.accordion-button {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2c3e50;
+    padding: 20px;
+    background: #fff;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #007bff;
+    background: #f8f9fa;
+}
+
+.accordion-body {
+    padding: 20px;
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+.accordion-body ul,
+.accordion-body ol {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.accordion-body li {
+    margin-bottom: 8px;
+}
+
+/* Contact Support Section */
+.contact-support {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.contact-support h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.contact-support p {
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+.support-options .btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 50px;
+}
+
+.support-options .btn i {
+    margin-right: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .help-hero {
+        padding: 60px 0;
+    }
+
+    .help-hero h1 {
+        font-size: 2rem;
+    }
+
+    .faq-sidebar {
+        margin-bottom: 30px;
+        position: static;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .help-hero {
+        padding: 40px 0;
+    }
+
+    .help-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .quick-link-card {
+        margin-bottom: 20px;
+    }
+
+    .faq-content {
+        padding: 20px;
+    }
+
+    .accordion-button {
+        font-size: 1rem;
+        padding: 15px;
+    }
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quick-link-card,
+.faq-category {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.quick-link-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.quick-link-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.quick-link-card:nth-child(4) {
+    animation-delay: 0.3s;
+} 
